@@ -28,7 +28,6 @@ wp-content/themes/twentytwenty
 advanced-cache.php
 object-cache.php
 wp-config.php
-index.php
 .vscode/
 logs/
 backup-db/
