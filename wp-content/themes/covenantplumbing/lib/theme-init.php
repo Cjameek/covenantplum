@@ -45,7 +45,7 @@ function mandr_setup_theme() {
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 600, 400, true ); // Normal post thumbnails
-		add_image_size( 'medium-plus', 400, 300, true ); // Medium+ Size
+		add_image_size( 'medium-plus', 431, 380, true ); // Medium+ Size
 	}
 	
 	/**
