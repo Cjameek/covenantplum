@@ -120,10 +120,19 @@ function div_span_wrapping_shortcode($atts, $content = null) {
  */
 add_shortcode('contact_phone', 'phone_link_sc');
 function phone_link_sc($atts, $content = null) {
+	extract(shortcode_atts(
+        array(
+            'prepend' => '',
+    ), $atts));
 	
 	$phone = get_option( 'options_mandr_phone' );
 	$phone2 = get_option( 'options_mandr_phone_appearance' );
-    $output = '<a itemprop="telephone" href="tel:'.$phone.'">'.$phone2.'</a>';
+
+	if( $prepend ) {
+		$output = '<a itemprop="telephone" href="tel:'.$phone.'">'.$prepend . ' ' . $phone2.'</a>';
+	} else {
+		$output = '<a itemprop="telephone" href="tel:'.$phone.'">'.$phone2.'</a>';
+	}
 
     return $output;
 }
