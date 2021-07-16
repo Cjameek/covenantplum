@@ -10,6 +10,10 @@ if( have_rows('page_layouts') ):
         /* Standard Callout */ 
         elseif( get_row_layout() == 'module_callout' ) :
             get_template_part('template-parts/modules/callout/callout');
+
+        /* Large Callout */ 
+        elseif( get_row_layout() == 'module_large_callout' ) :
+            get_template_part('template-parts/modules/large-callout/large-callout');
         
         /* Image Gallery Layout */ 
         elseif( get_row_layout() == 'module_gallery' ) : 
@@ -18,6 +22,10 @@ if( have_rows('page_layouts') ):
         /* Pages Layout */	
         elseif( get_row_layout() == 'module_pages' ) :
             get_template_part('template-parts/modules/pages/pages');
+
+        /* Services Layout */	
+        elseif( get_row_layout() == 'module_services' ) :
+            get_template_part('template-parts/modules/services/services');
 
         /* Table Layout */ 
         elseif( get_row_layout() == 'module_table' ) :
