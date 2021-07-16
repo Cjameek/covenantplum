@@ -1,0 +1,57 @@
+.large-callout {
+    &__container {
+        padding-top: $spacing-med;
+
+        &:after {
+            content: '';
+            background-color: $color-blue;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            visibility: visible;
+        }
+    }
+    &__image {
+        position: relative;
+        z-index: 1;
+        width: 70%;
+        min-height: 407px;
+        transform: translateX(-#{$spacing-lg}) translateY(#{$spacing-med});
+    }
+    &__content {
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: right;
+        padding: 42px 70px;
+        box-shadow: 0 0 50px rgba($color-blue-light, .47);
+
+        @media (min-width: $mobile-med){
+            width: 80%;
+        }
+
+        @media (min-width: $second-break){
+            width: $column-one-half;
+        }
+
+        p {
+            @extend .h3;
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.4;
+
+            a {
+                @extend .h2;
+                display: block;
+                margin: $spacing-tiny 0;
+            }
+        }
+    }
+}
