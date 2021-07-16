@@ -7,14 +7,13 @@ html {
 body {
     background-color: $color-background;
     color: $textColor;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'nunito', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
 
     @media (min-width: $mobile-med) {
         font-size: 18px;
-        line-height: 1.45;
     }
 
     @media (min-width: $second-break){
@@ -67,8 +66,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+    color: $color-blue;
     line-height: 1.2;
     margin: 0 0 12px;
 
@@ -81,41 +79,67 @@ h6,
 }
 h1,
 .h1 {
-    font-size: 36px;
+    font-family: 'trajan-pro-3', serif;
+    font-size: 40px;
+    font-weight: 600;
 
     @media (min-width: $mobile-small) {
-        font-size: 42px;
+        font-size: 62px;
     }
     @media (min-width: $mobile-med) {
-        font-size: 54px;
+        font-size: 80px;
     }
 }
 h2,
 .h2 {
-    font-size: 26px;
+    font-family: 'trajan-pro-3', serif;
+    font-size: 35px;
+    font-weight: 600;
 
     @media (min-width: $mobile-small) {
-        font-size: 32px;
+        font-size: 40px;
     }
     @media (min-width: $mobile-med) {
-        font-size: 40px;
+        font-size: 52px;
     }
 }
 h3,
 .h3 {
-    font-size: 24px;
+    font-family: 'nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+
+    @media (min-width: $mobile-small) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-med) {
+        font-size: 32px;
+    }
 }
 h4,
 .h4 {
-    font-size: 20px;
+    font-family: 'trajan-pro-3', serif;
+    font-size: 22px;
+    font-weight: 600;
+
+    @media (min-width: $mobile-small) {
+        font-size: 26px;
+    }
+    @media (min-width: $mobile-med) {
+        font-size: 32px;
+    }
 }
 h5,
 .h5 {
+    font-family: 'trajan-pro-3', serif;
     font-size: 18px;
+    font-weight: 600;
 }
 h6,
 .h6 {
+    font-family: 'nunito', sans-serif;
     font-size: 16px;
+    font-weight: 700;
 }
 
 // Header title

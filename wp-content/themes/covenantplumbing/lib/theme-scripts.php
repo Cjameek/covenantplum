@@ -18,6 +18,7 @@ function my_script() {
 	
 	/* Font */
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,700', false, NULL );
+	wp_enqueue_style( 'adobe-fonts', '//use.typekit.net/jtc5nco.css', false, NULL );
 	
 	/* CSS */
 	wp_enqueue_style( 'style', get_stylesheet_uri(), false, filemtime(get_stylesheet_directory().'/style.css') );		
