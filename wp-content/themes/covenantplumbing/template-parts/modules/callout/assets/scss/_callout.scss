@@ -1,18 +1,48 @@
 .standard-callout {
-    background-color: #eee;
+    &__container {
+        @media (max-width: $mobile-break-max){
+            padding: 0;
+        }
+    }
 
     &__wrap {
-        padding: 14px 24px;
+        position: relative;
+        background: rgb(212,216,245);
+        background: linear-gradient(90deg, rgba(212,216,245,1) 0%, rgba(255,255,255,1) 50%, rgba(212,216,245,1) 100%);
+        padding: $spacing-sm $spacing-tiny;
         text-align: center;
+
+        @media (min-width: $mobile-break){
+            padding: $spacing-sm $spacing-tiny;
+
+            &:after,
+            &:before {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                width: 150px;
+                height: 150px;
+                transform: translateY(-50%) rotate(45deg);
+            }
+    
+            &:before {
+                left: -#{$spacing-med};
+            }
+            &:after {
+                right: -#{$spacing-med};
+            }
+        }
+
+        a {
+            @extend .h2;
+            display: block;
+            margin-bottom: 0;
+        }
 
         p {
             margin-bottom: 0;
-            font-size: 28px;
-            font-weight: 700;
 
-            @media (min-width: $mobile-break){
-                font-size: 35px;
-            }
         }
     }
 }
