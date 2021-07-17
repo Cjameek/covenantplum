@@ -27,28 +27,6 @@
 
     <a class="skip-content" href="#primary-wrap" title="Skip to main content of page" tabindex="0">Skip to Content</a>
 	
-	<div id="mobilenavwrap">
-		<div class="button-wrap">
-			<button type="button" class="nav-button" aria-haspopup="true" aria-controls="mobilenav">
-				<span class="nav-button-text"></span>
-				<span class="nav-button-icon"></span>
-			</button>
-		</div>
-		<div class="mobile-menu">
-            <div class="menu-center force">
-                <?php 
-                    wp_nav_menu( array(
-                        'container'       => 'ul', 
-                        'menu_class'      => '', 
-                        'menu_id'         => 'mobilenav',
-                        'depth'           => 0,
-                        'theme_location' => 'header_menu' 
-                    )); 
-                ?>
-            </div>
-		</div>
-	</div>
-	
     <div id="main">
         <header id="header" class="header" role="banner">
             <div class="header__container container mobile-hide">
