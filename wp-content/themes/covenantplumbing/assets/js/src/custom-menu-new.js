@@ -157,8 +157,13 @@
             const focusableEls = associatedMenu.querySelectorAll(`li > a, li > button`);
 
             trapFocus(associatedMenu, focusableEls, true);
-    
-            return associatedMenu.setAttribute('aria-hidden', !isHidden);
+
+            // Close submenu if the parent toggle is clicked again
+            if( isHidden === 'true' ){
+                return associatedMenu.setAttribute('aria-hidden', 'false');
+            } else {
+                return associatedMenu.setAttribute('aria-hidden', 'true');
+            }
         } else {            
             const parentMenu = document.getElementById(targetParent);
             const currentActiveMenu = parentMenu.querySelector('[aria-hidden="false"]');
