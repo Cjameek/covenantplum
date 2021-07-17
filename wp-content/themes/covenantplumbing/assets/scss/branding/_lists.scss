@@ -44,6 +44,32 @@ ul:not([class]) {
     }
 }
 
+ol {
+    counter-reset: list;
+	list-style-type: none;
+    padding-left: 0;
+
+    > li {
+        position: relative;
+		z-index: 1;
+        margin-bottom: $spacing-sm;
+        padding-left: $spacing-med;
+
+        &::before {
+            counter-increment: list;
+			content: counters(list, '.');
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'trajan-pro-3', serif;
+            font-size: 63px;
+            line-height: 1;
+            color: $color-blue-light;
+        }
+    }
+}
+
 p + ul,
 p + .one-half > ul,
 p + .one-half + .one-half > ul {
@@ -72,7 +98,8 @@ ul.two-column,
  * Create unordered list columns
  */
 .two-column-lists {
-    ul:not([class]) {
+    ul:not([class]),
+    ol:not([class]) {
         @extend .responsive-column-count;
 
         column-count: 2;
@@ -89,7 +116,8 @@ ul.two-column,
     }
 }
 .three-column-lists {
-    ul:not([class]) {
+    ul:not([class]),
+    ol:not([class]) {
         column-count: 3;
         margin-right: auto;
         margin-left: auto;
@@ -103,6 +131,15 @@ ul.two-column,
 
         @media (max-width: $mobile-break) {
             column-count: 2;
+        }
+    }
+
+    &--break {
+        ul:not([class]),
+        ol:not([class]) {
+            @media (max-width: $mobile-break) {
+                column-count: 1;
+            }   
         }
     }
 }
