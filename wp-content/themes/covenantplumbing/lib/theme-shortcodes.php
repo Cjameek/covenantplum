@@ -155,8 +155,8 @@ function contact_email_sc($atts, $content = null) {
 add_shortcode('contact_address', 'contact_address_sc');
 function contact_address_sc($atts, $content = null) {
 	
-    $location_text = get_option( 'options_mandr_address' );
-    $location_full = get_option( 'options_mandr_address_link' );
+    $location_text = get_field( 'mandr_address', 'options' );
+    $location_full = get_field( 'mandr_address_link', 'options' );
     
     $output = '<a itemprop="address" href="'. $location_full.'" target="_blank">'.$location_text.'</a>';
 
