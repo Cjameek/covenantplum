@@ -85,15 +85,25 @@
         // Responsive wrap for Wordpress aligned images
         // ---------------------------------------------------------
 
+                // ---------------------------------------------------------
+        // Responsive wrap for Wordpress aligned images
+        // ---------------------------------------------------------
+
         $('img.alignleft').each(function () {
             var $this = $(this);
+            var w = $this[0].width;
 
             if ($this.parent('a').length > 0) {
                 $this
                     .parent('a')
-                    .wrap('<span class="mobile-center-image"></span>');
+                    .wrap('<span class="mobile-center-image"></span>')
+                    .wrap('<picture class="decorative-image--left"></picture>');
+
+                    $this[0].parentNode.style.maxWidth = w + 'px';
             } else {
-                $this.wrap('<span class="mobile-center-image"></span>');
+                $this.wrap('<span class="mobile-center-image"></span>').wrap('<picture class="decorative-image--left"></picture>');
+
+                $this[0].parentNode.style.maxWidth = w + 'px';
             }
         });
 
@@ -103,9 +113,10 @@
             if ($this.parent('a').length > 0) {
                 $this
                     .parent('a')
-                    .wrap('<span class="mobile-center-image"></span>');
+                    .wrap('<span class="mobile-center-image"></span>')
+                    .wrap('<picture class="decorative-image--right"></picture>');
             } else {
-                $this.wrap('<span class="mobile-center-image"></span>');
+                $this.wrap('<span class="mobile-center-image"></span>').wrap('<picture class="decorative-image--right"></picture>');
             }
         });
 
