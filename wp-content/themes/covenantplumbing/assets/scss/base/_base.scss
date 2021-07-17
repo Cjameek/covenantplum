@@ -23,3 +23,11 @@ hr {
     margin: 8px 0 10px;
     padding: 0;
 }
+
+.primary-content {
+    margin-top: 92px;
+
+    @media (min-width: $mobile-break){
+        margin-top: 155px;
+    }
+}
