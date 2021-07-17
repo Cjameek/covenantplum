@@ -17,7 +17,8 @@
     }
 }
 
-textarea.medium {
+textarea.medium,
+textarea.large {
     height: 148px;
 }
 
@@ -107,4 +108,8 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
             }
         }
     }
+}
+
+.page-id-568 .one-half:not(.first) > p {
+    display: none;
 }
