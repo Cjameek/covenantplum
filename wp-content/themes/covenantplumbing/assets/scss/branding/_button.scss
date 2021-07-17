@@ -4,24 +4,49 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .button {
+    position: relative;
     width: auto;
     color: #fff;
-    background: #000;
-    cursor: pointer;
-    padding: 12px 32px;
-    text-transform: uppercase;
+    background: transparent;
+    padding: $spacing-tiny $spacing-med $spacing-tiny $spacing-sm;
     border: none;
     border-radius: none;
     box-shadow: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
     transform-style: preserve-3d;
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 0% 50%);
 
-    /*@include transition(all 2.0s ease-in-out);*/
+    transition: all 250ms ease-in-out;    
+    
+    &:after {
+        content: '';
+        background: rgb(45,47,98);
+        background: linear-gradient(90deg, rgba(45,47,98,1) 0%, rgba(58,70,154,1) 50%, rgba(110,126,233,1) 100%);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 250ms ease-in-out;
+    }
 
     &:hover,
     &:focus {
-        color: #fff;
-        /*animation: rotato 4s infinite linear;*/
+        background: #fff;
+        color: $color-blue;
+
+        &:after {
+            opacity: 0;
+        }
     }
+
+
 }
 
 .button {
@@ -32,6 +57,21 @@ input[type='submit'],
         background: transparent;
         border: none;
         padding: 0;
+    }
+
+    &--inverse {
+        background: #fff;
+        color: $color-blue;
+
+        &:after {
+            opacity: 0;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: #000;
+            color: #fff;
+        }
     }
 }
 
