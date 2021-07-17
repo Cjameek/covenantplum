@@ -1,6 +1,13 @@
 .large-callout {
     &__container {
         padding-top: $spacing-med;
+        margin-bottom: 0;
+        padding-bottom: $spacing-med;
+
+        @media (min-width: $mobile-break){
+            margin-bottom: $spacing-med;
+            padding-bottom: 0;
+        }
 
         &:after {
             content: '';
@@ -12,33 +19,39 @@
             left: 0;
             right: 0;
             margin: auto;
-            width: 80%;
+            width: 100%;
             height: 100%;
             visibility: visible;
+
+            @media (min-width: $mobile-break){
+                width: 80%;
+            }
         }
     }
     &__image {
-        position: relative;
-        z-index: 1;
-        width: 70%;
-        min-height: 407px;
-        transform: translateX(-#{$spacing-lg}) translateY(#{$spacing-med});
+        display: none;
+
+        @media (min-width: $mobile-break){
+            display: block;
+            position: relative;
+            z-index: 1;
+            width: 70%;
+            min-height: 407px;
+            transform: translateX(-#{$spacing-lg}) translateY(#{$spacing-med});
+        }
     }
     &__content {
         background-color: #fff;
         position: relative;
         z-index: 2;
         width: 100%;
-        float: right;
+        float: none;
         padding: 42px 70px;
         box-shadow: 0 0 50px rgba($color-blue-light, .47);
 
-        @media (min-width: $mobile-med){
-            width: 80%;
-        }
-
-        @media (min-width: $second-break){
+        @media (min-width: $mobile-break){
             width: $column-one-half;
+            float: right;
         }
 
         p {
