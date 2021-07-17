@@ -2,7 +2,6 @@
 $section_id = get_sub_field('section_id');
 $section_classes = get_sub_field('section_classes');
 $columns = get_sub_field('columns');
-$section_classes = 'columns';
 
 // Can't just print an empty id and have id="", so build printout here instead
 $id = !empty($section_id) ? "id=\"{$section_id}\"" : '';
@@ -32,7 +31,7 @@ if( $columns ) :
     ?>
     <section 
         <?= $section_id; ?> 
-        class="section-wrap <?= $section_classes; ?>"
+        class="section-wrap columns <?= $section_classes; ?>"
         style="<?= $section_style; ?>"
     >
     <div class="columns__container container">
