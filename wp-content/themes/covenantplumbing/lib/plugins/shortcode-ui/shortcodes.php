@@ -144,42 +144,6 @@
         )
     );
 
-	/** Shortcake associated with Youtube shortcode */
-	shortcode_ui_register_for_shortcode(
-
-	/** Shortcode title */
-	'email',
-
-	array(
-		'label' => 'Add Email Hyperlink',
-		'listItemImage' => 'dashicons-email',
-
-		/** Shortcode Attributes */
-		'attrs'         => array(
-			array(
-				'label'        => 'Email',
-				'attr'         => 'email',
-				'type'         => 'text',
-				'description'  => 'Add email link',
-			),
-			array(
-				'label'        => 'Text',
-				'attr'         => 'text',
-				'type'         => 'text',
-				'description'  => 'Add email text',
-			),
-			array(
-				'label'        => 'Class',
-				'attr'         => 'class',
-				'type'         => 'text',
-				'description'  => 'Apply a class',
-			),
-		),
-
-		'post_type'     => array( 'post', 'page' ), 
-		)
-	);
-
 	/** Shortcake associated with toggle shortcode */
 	shortcode_ui_register_for_shortcode(
 	'callout',
