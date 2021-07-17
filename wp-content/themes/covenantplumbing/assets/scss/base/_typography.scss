@@ -176,6 +176,16 @@ a {
     }
 }
 
+.section-wrap.columns a:not([class]){
+    color: $color-blue;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
 p {
     margin: 0;
     margin-bottom: 18px;
