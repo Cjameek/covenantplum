@@ -30,16 +30,27 @@ Site Header
 
 .header {
     background-color: #fff;
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
-    padding-top: 10px;
+    padding: $spacing-tiny 0;
     text-align: center;
+
+    @media (min-width: $mobile-break){
+        padding: $spacing-sm 0;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
 
     &__logo {
         margin: auto;
+        margin-left: 0;
         float: none;
 
         @media (max-width: $second-break) {
@@ -51,7 +62,7 @@ Site Header
         }
 
         &__image {
-            max-width: 150px;
+            max-width: 300px;
         }
     }
 
