@@ -9,10 +9,6 @@
         color: #fff;
         text-align: center;
 
-        @media (min-width: $mobile-break){
-            padding: 0;
-        }
-
         &__title {
             color: #fff;
         }
