@@ -1,0 +1,55 @@
+.hero {
+    position: relative;
+
+    &__content {
+        z-index: 10;
+        width: 100%;
+        max-width: 900px;
+        padding: 0 $spacing-xs;
+        color: #fff;
+        text-align: center;
+
+        @media (min-width: $mobile-break){
+            padding: 0;
+        }
+
+        &__title {
+            color: #fff;
+        }
+    }
+    &__slider {
+        &__pagination {
+            .slick-dots {
+                @media (max-width: $mobile-break-max){
+                    bottom: $spacing-xs;
+                }
+        
+                li {
+                    margin: 0 $spacing-tiny;
+
+                    button {
+                        background-color: #fff;
+                        border-radius: 100%;
+                        opacity: .6;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+
+                    &.slick-active button {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__slide {
+        position: relative;
+        min-height: 460px;
+
+        @media (min-width: $mobile-break){
+            min-height: 660px;
+        }
+    }
+}
