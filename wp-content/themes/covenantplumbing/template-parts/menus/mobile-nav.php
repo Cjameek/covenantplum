@@ -108,20 +108,11 @@ function mobile_nav_build_primary($nav){
 function mobile_nav_build_sub_menu( $id, $title, $secondary, $sub_menu_items ) {
     ?>
     <button type="button" class="mobile-menu-primary__toggle button--clear" data-open="sub-menu-<?= $id; ?>">
-        <span class="mobile-menu-primary__toggle__icon ikes-play no-touch" aria-hidden="true"></span>
+        <span class="mobile-menu-primary__toggle__icon ikes-chevron-down no-touch" aria-hidden="true"></span>
         <span class="mobile-menu-primary__toggle__text sr-only no-touch">Open <?= $title; ?></span>
     </button>
 
     <ul id="sub-menu-<?= $id; ?>" class="mobile-menu__navigation mobile-sub-menu" data-level="2" aria-hidden="true">
-        <li class="mobile-sub-menu__close">
-            <button type="button" class="mobile-sub-menu__toggle button--clear" data-close="mobile-item-<?= $id; ?>">
-                <span class="mobile-sub-menu__toggle__icon no-touch" aria-hidden="true"></span>
-                <span class="mobile-sub-menu__toggle__text no-touch">
-                    <span class="ikes-arrow reverse no-touch" aria-hidden="true"></span> 
-                    Back to <?= $title; ?>
-                </span>
-            </button>
-        </li>
         <?php
         foreach( $secondary as $item ) :
             $id = $item->ID;
