@@ -21,9 +21,6 @@ $primary_navigation = wp_get_nav_menu_items($menu);
     <div id="mobile-navigation" class="mobile-nav__menu mobile-menu">
         <div class="mobile-menu__wrap menu-center force">
             <div id="mobile-menu" class="mobile-menu__panel">
-                <button id="close-nav-menu" class="mobile-menu__close button--clear">
-                    <span class="ikes-cross" aria-hidden="true"></span>
-                </button>
                 <div id="mobile-menu-primary" class="mobile-menu__group">
                     <?php mobile_nav_build_primary($primary_navigation); ?>
                 </div>
