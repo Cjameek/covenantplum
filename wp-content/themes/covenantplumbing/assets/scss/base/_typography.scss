@@ -102,6 +102,12 @@ h2,
     @media (min-width: $mobile-break) {
         font-size: 52px;
     }
+
+    .columns  &:not(.h3):after {
+        content: url('assets/images/water-drop.svg');
+        display: block;
+        margin-top: $spacing-xs;
+    }
 }
 h3,
 .h3 {
