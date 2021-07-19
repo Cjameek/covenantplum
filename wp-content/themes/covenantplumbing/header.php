@@ -37,17 +37,21 @@
                     <span class="header__logo__text sr-only"><?php echo bloginfo('name'); ?></span>
                 </p>
                 
-                <nav class="header__navigation primary-nav">
-                    <?php 
-                        wp_nav_menu( array(
-                            'container'       => 'ul', 
-                            'menu_class'      => 'sf-menu', 
-                            'menu_id'         => 'topnav',
-                            'depth'           => 0,
-                            'theme_location' => 'header_menu' 
-                        )); 
-                    ?>
-                </nav>
+                <div class="header__inner">
+                    <nav class="header__navigation primary-nav">
+                        <?php 
+                            wp_nav_menu( array(
+                                'container'       => 'ul', 
+                                'menu_class'      => 'sf-menu', 
+                                'menu_id'         => 'topnav',
+                                'depth'           => 0,
+                                'theme_location' => 'header_menu' 
+                            )); 
+                        ?>
+                    </nav>
+                    <?php $phone = get_option( 'options_mandr_phone' ); ?>
+                    <?= phone_link($phone); ?>
+                </div>
             </div>
 
             <?php get_template_part('template-parts/menus/mobile-nav'); ?>
