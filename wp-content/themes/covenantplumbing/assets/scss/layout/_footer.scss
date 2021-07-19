@@ -2,7 +2,7 @@
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
-#footer {
+.footer {
     background-image: url('assets/images/footer-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -10,9 +10,58 @@ Site Footer
     color: #000;
     font-size: 18px;
     padding: $spacing-med 0;
-    text-align: center;
 
     p {
         margin-bottom: 0;
+    }
+
+    a:not([class]) {
+        color: #000;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &__primary {
+        &__column {
+            @media (max-width: $mobile-break-max){
+                margin-top: $spacing-med;
+                text-align: center;
+    
+                &.first {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        @media (max-width: $mobile-break-max){
+            img {
+                max-width: 352px;
+            }
+        }
+    }
+
+    &__contact {
+        h3 {
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__accreditation {
+        p {
+            margin-bottom: $spacing-tiny;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        margin-top: $spacing-lg;
+        text-align: center;
     }
 }
