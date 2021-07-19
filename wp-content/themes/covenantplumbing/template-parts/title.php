@@ -20,4 +20,8 @@
             ?>
         </h1>
     </div>
+
+    <?php $image = get_field('banner_image'); ?>
+    <?php $url = $image ? $image : get_template_directory_uri() . '/assets/images/cp-banner-default.jpg'; ?>
+    <div class="header-title__background abs-cover bg-image full" style="background-image: url(<?= $url; ?>)"></div>
 </div>
