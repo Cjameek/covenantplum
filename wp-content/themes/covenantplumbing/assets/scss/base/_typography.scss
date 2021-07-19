@@ -151,11 +151,18 @@ h6,
 // Header title
 .header-title {
     background-color: $color-blue-dark;
+    position: relative;
     padding: $spacing-lg 0;
     text-align: center;
 
     h1 {
+        position: relative;
+        z-index: 1;
         color: #fff;
+    }
+
+    &__background {
+        opacity: .2;
     }
 }
 
