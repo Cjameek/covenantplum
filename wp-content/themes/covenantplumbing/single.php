@@ -31,7 +31,9 @@ get_header();
 
 				</div>
 			</section>
-			<?php get_template_part( 'template-parts/advanced-layout' ); ?>
+			<div class="primary-content__modules">
+				<?php get_template_part( 'template-parts/advanced-layout' ); ?>
+			</div>
 		</article>
 	<?php endwhile; endif; ?>
 </main>

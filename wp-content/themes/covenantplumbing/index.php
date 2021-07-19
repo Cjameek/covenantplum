@@ -6,7 +6,7 @@ get_header();
 	<div class="archive-holder">
     	<div class="container">
 			<?php get_template_part( 'template-parts/title' ); ?>
-			<div id="posts" class="posts">
+			<div id="posts" class="primary-content__modules posts">
 				<?php
 				if( $wp_query->have_posts() ):
 					while( $wp_query->have_posts() ):

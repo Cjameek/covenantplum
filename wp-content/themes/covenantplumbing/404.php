@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main id="primary-wrap" class="primary-content" role="main">
 	<div class="container">
-		<div id="content" class="double-padding">
+		<div id="content" class="primary-content__modules double-padding">
 			<div id="error404" class="error404 clearfix">
 				<div class="error404-num">404</div>
 				<h1>Sorry!</h1>
