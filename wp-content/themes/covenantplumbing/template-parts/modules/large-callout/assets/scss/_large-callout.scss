@@ -64,6 +64,11 @@
                 @extend .h2;
                 display: block;
                 margin: $spacing-tiny 0;
+
+                &:hover,
+                &:focus {
+                    color: #000;
+                }
             }
         }
     }
