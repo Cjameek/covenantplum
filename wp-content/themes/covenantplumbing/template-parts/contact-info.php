@@ -14,6 +14,7 @@ if($phone || $address || $email):
 		<?php endif; ?>
 		<?php if( $address ) : ?>
 			<p class="contact-address">
+				<h3 class="h2">Address:</h3>
 				<?php if($address_link): ?>
 					<a href="<?= $address_link; ?>" target="_blank">
 				<?php endif; ?>
