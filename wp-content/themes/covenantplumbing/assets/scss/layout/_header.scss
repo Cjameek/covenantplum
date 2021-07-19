@@ -56,10 +56,16 @@ Site Header
     }
 
     &__inner {
+        width: 100%;
         margin-top: $spacing-sm;
         
         @media (min-width: $first-break) {
+            width: auto;
             margin-top: 0;
+        }
+
+        .button {
+            vertical-align: top;
         }
     }
 
