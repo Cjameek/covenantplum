@@ -46,14 +46,32 @@ Site Header
     &__container {
         display: flex;
         align-items: center;
+        width: 100%;
+        padding: 0 5%;
+
+        @media (max-width: $first-break-max) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__inner {
+        margin-top: $spacing-sm;
+        
+        @media (min-width: $first-break) {
+            margin-top: 0;
+        }
     }
 
     &__logo {
         margin: auto;
-        margin-left: 0;
         float: none;
 
-        @media (max-width: $second-break) {
+        @media (min-width: $first-break) {
+            margin-left: 0;
+        }
+
+        @media (max-width: $second-break-max) {
             margin-bottom: 0;
         }
 
