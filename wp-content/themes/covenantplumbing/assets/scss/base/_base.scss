@@ -59,4 +59,24 @@ hr {
             right: 0;
         }
     }
+
+    .home &__modules:after {
+        right: initial;
+        left: 0;
+        transform: rotateY(180deg);
+    }
+}
+
+.home {
+    .large-callout {
+        position: relative;
+    }
+    .large-callout:after {
+        content: url('assets/images/cp-top-watermark.png');
+        position: absolute;
+        z-index: -2;
+        opacity: .6;
+        bottom: -#{$spacing-med};
+        right: 0;
+    }
 }
