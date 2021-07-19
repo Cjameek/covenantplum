@@ -26,8 +26,32 @@ hr {
 
 .primary-content {
     margin-top: 92px;
-
+    
     @media (min-width: $mobile-break){
         margin-top: 155px;
+    }
+
+    &__modules {
+        position: relative;
+    
+        &:after,
+        &:before {
+            position: absolute;
+            z-index: -2;
+            opacity: .6;
+        }
+    
+        &:before {
+            content: url('assets/images/cp-bottom-watermark.png');
+            top: 0;
+            left: 0;
+        }
+    
+        &:after {
+            content: url('assets/images/cp-top-watermark.png');
+            bottom: 0;
+            right: 0;
+    
+        }
     }
 }
