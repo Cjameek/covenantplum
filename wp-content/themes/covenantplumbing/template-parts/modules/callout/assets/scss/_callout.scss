@@ -14,24 +14,7 @@
 
         @media (min-width: $mobile-break){
             padding: $spacing-sm $spacing-tiny;
-
-            &:after,
-            &:before {
-                content: '';
-                background-color: #fff;
-                position: absolute;
-                top: 50%;
-                width: 150px;
-                height: 150px;
-                transform: translateY(-50%) rotate(45deg);
-            }
-    
-            &:before {
-                left: -#{$spacing-med};
-            }
-            &:after {
-                right: -#{$spacing-med};
-            }
+            clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
         }
 
         a {
