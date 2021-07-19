@@ -59,12 +59,53 @@
             }
         }
 
+        &__overlay {
+            z-index: -1;
+            background-color: $color-blue-dark;
+            opacity: 0;
+            transition: opacity 450ms ease;
+        }
+
         &__anchor {
             display: inline-flex;
             position: relative;
             z-index: 1;
             width: 100%;
             height: 100%;
+
+            &:before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='91.913' height='549.453' viewBox='0 0 91.913 549.453'%3E%3Cpath d='M919,1565c-37.91,101.6-37.91,148.4-10.786,280.33S919,2114.453,919,2114.453H831.965V1565Z' transform='translate(-831.965 -1565)' fill='%233a469a'/%3E%3C/svg%3E%0A");
+                background-position: top;
+                background-repeat: no-repeat;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 90px;
+                height: 100%;
+                transform: translateX(-90px);
+                transition: transform 450ms ease;
+            }
+
+            &:after {
+                content: $ikes-arrow;
+                display: inline-flex;
+                vertical-align: bottom;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) translateX(-90px);
+                width: 65px;
+                height: 45px;
+                font-family: 'ikes';
+                font-size: 14px;
+                color: #fff;
+                transition: transform 450ms ease;
+            }
 
             h3  {
                 background-color: rgba( $color-blue, .7 );
@@ -74,11 +115,48 @@
                 color: #fff;
                 font-size: 24px;
                 text-align: center;
+                transition: background-color 450ms ease;
+            }
+
+            &:hover,
+            &:focus {
+                &:before {
+                    transform: translateX(0);
+                }
+
+                &:after {
+                    transform: translateY(-50%) translateX(0);
+                }
+
+                h3 {
+                    background-color: transparent;
+                }
+
+                @supports not (background-blend-mode: multiply) {
+                    .services__list-item__overlay {
+                        opacity: .8;
+                    }
+                }
+
+                @supports (background-blend-mode: multiply) {
+                    .services__list-item__image {
+                        opacity: 0;
+                    }
+                }
             }
         }
 
         &__image {
-            z-index: -1;
+            z-index: -2;
+            opacity: 1;
+            transition: opacity 450ms ease;
+
+            &--hover {
+                z-index: -3;
+                background-color: $color-blue-dark;
+                background-blend-mode: multiply;
+                opacity: 1;
+            }
         }
     }
 }

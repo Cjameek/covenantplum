@@ -34,9 +34,14 @@ if( $padding_top && $padding_bottom ) {
             ?>
             <li class="services__list-item">
                 <a class="services__list-item__anchor" href="<?= $link; ?>">
-                    <h3 class="h4"><?= $service->post_title; ?></h3>
+                    <h3 class="services__list-item__title h4"><?= $service->post_title; ?></h3>
+
+                    <div class="services__list-item__backgrounds">
+                        <span class="services__list-item__overlay abs-cover"></span>
+                        <div class="services__list-item__image abs-cover bg-image full" style="background-image: url(<?= $image['url']; ?>);" aria-hidden="true"></div>
+                        <div class="services__list-item__image--hover abs-cover bg-image full" style="background-image: url(<?= $image['url']; ?>);" aria-hidden="true"></div>
+                    </div>
                 </a>
-                <div class="services__list-item__image abs-cover bg-image full" style="background-image: url(<?= $image['url']; ?>);" aria-hidden="true"></div>
             </li>
             <?php
         endforeach;
