@@ -82,10 +82,18 @@ Site Navigation
 .sf-menu > li.current_page_item,
 .sf-menu > li.current_page_parent,
 .sf-menu > li.current-menu-parent {
-    background: #cfdeff;
+    background: $color-blue;
     /* only transition out, not in */
     -webkit-transition: none;
     transition: none;
+
+    > a {
+        color: #fff;
+
+        &:after {
+            color: #fff;
+        }
+    }
 }
 
 /* styling for both css and generated arrows */
