@@ -28,11 +28,16 @@ hr {
     margin-top: 92px;
     
     @media (min-width: $mobile-break){
+        margin-top: 275px;
+    }
+
+    @media (min-width: $first-break){
         margin-top: 155px;
     }
 
     &__modules {
         position: relative;
+        overflow: hidden;
     
         &:after,
         &:before {
@@ -43,15 +48,15 @@ hr {
     
         &:before {
             content: url('assets/images/cp-bottom-watermark.png');
-            top: 0;
+            top: -#{$spacing-med};
             left: 0;
+            transform: rotateX(180deg);
         }
     
         &:after {
             content: url('assets/images/cp-top-watermark.png');
-            bottom: 0;
+            bottom: -#{$spacing-med};
             right: 0;
-    
         }
     }
 }
