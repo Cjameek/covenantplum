@@ -67,7 +67,7 @@ hr {
     }
 }
 
-.home {
+body.home {
     .large-callout {
         position: relative;
     }
@@ -78,5 +78,14 @@ hr {
         opacity: .6;
         bottom: -#{$spacing-med};
         right: 0;
+    }
+}
+
+body.page-services {
+    .section-wrap.columns:nth-of-type(even) {
+        .columns__row {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 }
