@@ -30,7 +30,7 @@
             }
         }
 
-        @media (min-width: $mobile-tiny) and (max-width: $second-break-max) {
+        @media (min-width: $mobile-small) and (max-width: $second-break-max) {
             width: $column-one-half;
             min-height: 350px;
             margin-left: $column-margin;
