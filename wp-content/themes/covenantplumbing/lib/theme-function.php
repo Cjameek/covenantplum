@@ -186,7 +186,7 @@ function phone_tel_number( $phone ) {
 	return preg_replace('/\D+/', '', $phone);
 }
 function phone_link( $phone ) {
-	$return = "<a class=\"button\" href='tel:".phone_tel_number($phone)."' target='_blank' rel='noopener noreferrer'>Emergency: ".$phone."</a>";
+	$return = "<a class=\"button\" href='tel:".phone_tel_number($phone)."' rel='noopener noreferrer'>Emergency: ".$phone."</a>";
 	return $return;
 }
 
