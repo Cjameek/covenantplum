@@ -84,8 +84,10 @@ body.home {
 body.page-services {
     .section-wrap.columns:nth-of-type(even) {
         .columns__row {
-            display: flex;
-            flex-direction: column-reverse;
+            @media (max-width: $mobile-break-max){
+                display: flex;
+                flex-direction: column-reverse;
+            }
         }
     }
 }
