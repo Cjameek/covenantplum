@@ -136,7 +136,7 @@ function watch() {
         ], 
         compileFooterScripts
     );
-    gulp.watch(['assets/scss/**/**/**/*.scss', 'template-parts/modules/**/assets/scss/*.scss'], compileSass);
+    gulp.watch(['template-parts/modules/**/assets/scss/*.scss', 'assets/scss/**/**/**/*.scss'], compileSass);
 }
 
 exports.watch = watch;
