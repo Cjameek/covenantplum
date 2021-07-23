@@ -155,9 +155,14 @@ h6,
     padding: $spacing-lg 0;
     text-align: center;
 
+    @media (min-width: $large-break) {
+        padding: 92px;
+    }
+
     h1 {
         position: relative;
         z-index: 1;
+        margin-bottom: 0;
         color: #fff;
     }
 
