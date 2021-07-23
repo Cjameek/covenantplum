@@ -320,8 +320,10 @@ function email_shortcode($atts, $content = null) {
     
     $email = antispambot($email);
     $text = antispambot($text);
+
+	$email_class = $class ? "class=\"{$class}\"" : '';
     
-    $output =  '<a href="mailto:'.$email.'" class="'.$class.'">';
+    $output =  '<a href="mailto:'.$email.'" '.$$email_class.'>';
 		$output .= $text;
 		$output .= '</a>';
 
