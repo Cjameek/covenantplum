@@ -17,7 +17,8 @@
     width: 1px;
 }
 
-
+figure.wp-caption.alignleft,
+figure.wp-caption.alignright,
 .decorative-image--right,
 .decorative-image--left {
     display: block;
@@ -38,6 +39,7 @@
     }
 }
 
+figure.wp-caption.alignleft,
 .decorative-image--left {
     float: left;
     margin: 0 24px 24px 0;
@@ -52,6 +54,7 @@
     }
 }
 
+figure.wp-caption.alignright,
 .decorative-image--right {
     float: right;
     margin: 0 0 24px 24px;
