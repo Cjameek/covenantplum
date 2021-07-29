@@ -54,6 +54,10 @@ Site Footer
     }
 
     &__accreditation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
         p {
             margin-bottom: $spacing-tiny;
         }

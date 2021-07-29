@@ -18,6 +18,10 @@
 				<p>Licensed & Insured <br>
 				Member of the</p>
 				<img src="<?php bloginfo('template_url'); ?>/assets/images/bbb-logo.png" width="164" alt="Better Business Bureau logo">
+
+				<div class="spacer"></div>
+
+				<img src="<?php bloginfo('template_url'); ?>/assets/images/bob-logo.png" width="100" alt="Best of the Best 2021 Macon Telegraph logo">
 			</div>  
 		</div>
 	</div>
