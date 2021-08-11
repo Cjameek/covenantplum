@@ -9,6 +9,7 @@
 .callout-wrap {
     @extend .h3;
     line-height: 1.45;
+    font-family: 'trajan-pro-3', serif;
 }
 
 @media (max-width: $mobile-break) {

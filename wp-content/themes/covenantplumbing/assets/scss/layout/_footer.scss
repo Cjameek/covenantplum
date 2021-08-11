@@ -27,10 +27,10 @@ Site Footer
 
     &__primary {
         &__column {
-            @media (max-width: $mobile-break-max){
+            @media (max-width: $mobile-break-max) {
                 margin-top: $spacing-med;
                 text-align: center;
-    
+
                 &.first {
                     margin-top: 0;
                 }
@@ -39,9 +39,10 @@ Site Footer
     }
 
     &__logo {
-        @media (max-width: $mobile-break-max){
+        @media (max-width: $mobile-break-max) {
             img {
                 max-width: 352px;
+                width: 100%;
             }
         }
     }
@@ -57,7 +58,7 @@ Site Footer
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         p {
             margin-bottom: $spacing-tiny;
         }

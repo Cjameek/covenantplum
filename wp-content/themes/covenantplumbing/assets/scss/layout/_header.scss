@@ -38,8 +38,9 @@ Site Header
     height: auto;
     padding: $spacing-tiny 0;
     text-align: center;
+    box-shadow: 0 0 10px grey;
 
-    @media (min-width: $mobile-break){
+    @media (min-width: $mobile-break) {
         padding: $spacing-sm 0;
     }
 
@@ -58,7 +59,7 @@ Site Header
     &__inner {
         width: 100%;
         margin-top: $spacing-sm;
-        
+
         @media (min-width: $first-break) {
             width: auto;
             margin-top: 0;

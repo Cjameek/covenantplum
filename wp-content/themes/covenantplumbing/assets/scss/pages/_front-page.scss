@@ -7,12 +7,13 @@
     background: #fff;
     display: block;
     z-index: 99999;
-}
-.home #loading-delay {
-    background-image: url(assets/images/ajax-loader.gif);
+
+    background-image: url('assets/images/loader.png');
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-size: 120px;
 }
+
 .no-js #loading-delay {
     display: none;
 }

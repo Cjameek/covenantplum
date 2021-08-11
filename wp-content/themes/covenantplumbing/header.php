@@ -7,11 +7,27 @@
 	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TSZW7JW');</script>
+    <!-- End Google Tag Manager -->
+
 <?php wp_head(); ?>
     
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#loading-delay').delay(400).fadeOut(300);
+        $('#loading-delay').delay(1200).fadeOut(300);
         setTimeout( function(){
             $(document.body).trigger('siteLoaded');
             $(document.body).addClass('site-loaded');
@@ -21,10 +37,18 @@
     
 </head>
 <body <?php body_class(); ?>>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSZW7JW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <?php wp_body_open(); ?>
-    
-    <div id="loading-delay"></div>
-
+    <?php
+        if (is_front_page()) :
+    ?>
+        <div id="loading-delay"></div>
+    <?php
+        endif;
+    ?>
     <a class="skip-content" href="#primary-wrap" title="Skip to main content of page" tabindex="0">Skip to Content</a>
 	
     <div id="main">

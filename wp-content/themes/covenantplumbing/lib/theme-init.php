@@ -4,7 +4,7 @@ add_action( 'after_setup_theme', 'mandr_setup_theme' );
 
 function mandr_setup_theme() {
 	
-	define("THEME_VERSION", '0.0.10');
+	define("THEME_VERSION", '1.0.0');
 	//define("MR_CACHE_TIMEOUT", 15); //15s cache staging, unused
 	define("MR_GOOGLE_MAPS_API_KEY", ''); // Empty google maps key for development usage
 			
